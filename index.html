@@ -97,11 +97,12 @@
         <a-camera gps-camera gpsMinDistance="5" rotation-reader look-controls="pointerLockEnabled: true"
             fov="80"></a-camera>
 
-        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.910617; longitude: 106.584821" scale="1 1 1"
+
+        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.772905; longitude: 106.708191" scale="1 1 1"
             gltf-model="#bridgeModel" rotation="0 50 0" position="0 0 0" visible="false" gesture-handler></a-entity>
 
         <!-- Model đánh dấu vị trí cầu -->
-        <a-entity id="bridgeMarker" gps-entity-place="latitude: 10.911042; longitude: 106.584666" scale="2 2 2"
+        <a-entity id="bridgeMarker" gps-entity-place="latitude: 10.772799; longitude: 106.707865" scale="2 2 2"
             gltf-model="#markerModel" position="0 -10 0" rotation="0 180 0" visible="false">
         </a-entity>
 
@@ -139,7 +140,7 @@
         </a-entity> -->
 
         <!-- Hiệu ứng ánh sáng ở đầu cầu 1 -->
-        <a-entity gps-entity-place="latitude: 10.910656; longitude: 106.584478" spe-particles="
+        <a-entity gps-entity-place="latitude: 10.773028; longitude: 106.706894" spe-particles="
     texture: images/particles/star.png;
     color: #FFD700, #FFA500, #FFFF00, #FFFFFF;
     distribution: BOX;
@@ -151,9 +152,9 @@
     angle: 0, 6.28;
     maxAge: 2.5;">
         </a-entity>
-
+	    
         <!-- Hiệu ứng ánh sáng ở đầu cầu 2 -->
-        <a-entity gps-entity-place="latitude: 10.910656; longitude: 106.585165" spe-particles="
+        <a-entity gps-entity-place="latitude: 10.772894; longitude: 106.709451" spe-particles="
     texture: images/particles/star.png;
     color: #FFD700, #FFA500, #FFFF00, #FFFFFF;
     distribution: BOX;
@@ -439,8 +440,8 @@
         function success(position) {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            let bridgeLat = 10.910617;
-            let bridgeLon = 106.584821;
+            let bridgeLat = 10.772905;
+            let bridgeLon = 106.708191;
             // Chuyển GPS thành tọa độ X, Z
             let { x, z } = gpsToMeters(bridgeLat, bridgeLon, lat, lon);
 
