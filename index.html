@@ -98,7 +98,7 @@
             fov="80"></a-camera>
 
 
-        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.772905; longitude: 106.708191" scale="3.5 3.5 3.5"
+        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.7730718; longitude: 106.7083024" scale="3.5 3.5 3.5"
             gltf-model="#bridgeModel" rotation="0 -13 0" position="0 0 0" visible="false" gesture-handler></a-entity>
 
         <!-- Model đánh dấu vị trí cầu -->
@@ -441,8 +441,8 @@
         function success(position) {
             let lat = position.coords.latitude;
             let lon = position.coords.longitude;
-            let bridgeLat = 10.772905;
-            let bridgeLon = 106.708191;
+            let bridgeLat = 10.7730718;
+            let bridgeLon = 106.7083024;
             // Chuyển GPS thành tọa độ X, Z
             let { x, z } = gpsToMeters(bridgeLat, bridgeLon, lat, lon);
 
