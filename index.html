@@ -98,7 +98,7 @@
             fov="80"></a-camera>
 
 
-        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.772905; longitude: 106.708191" scale="1 1 1"
+        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.772905; longitude: 106.708191" scale="1.5 1.5 1.5"
             gltf-model="#bridgeModel" rotation="0 -13 0" position="0 0 0" visible="false" gesture-handler></a-entity>
 
         <!-- Model đánh dấu vị trí cầu -->
@@ -148,6 +148,7 @@
     velocity: 0 1 0;
     velocity-spread: 0.5 1 0.5; 
     blending: additive;
+    size: 3, 5;
     particle-count: 150;
     angle: 0, 6.28;
     maxAge: 2.5;">
@@ -352,7 +353,7 @@
 
             // Chờ một chút trước khi chạy animation để chắc chắn cầu hiển thị trước
             setTimeout(() => {
-                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 50} 75 ${initialPosition.z}; to: ${initialPosition.x + 50} ${initialPosition.y} ${initialPosition.z}; dur: 900; easing: easeOutBack ;`);
+                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 70} 75 ${initialPosition.z}; to: ${initialPosition.x + 70} ${initialPosition.y} ${initialPosition.z}; dur: 900; easing: easeOutBack ;`);
                 // Đợi 3s (thời gian cầu xuất hiện) rồi mới hiển thị text
                 // Chờ 5s rồi mới hiện marker
                 setTimeout(() => {
