@@ -98,12 +98,12 @@
             fov="80"></a-camera>
 
 
-        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.772905; longitude: 106.708191" scale="1.5 1.5 1.5"
+        <a-entity id="helix_bridge" gps-entity-place="latitude: 10.772905; longitude: 106.708191" scale="2 2 2"
             gltf-model="#bridgeModel" rotation="0 -13 0" position="0 0 0" visible="false" gesture-handler></a-entity>
 
         <!-- Model đánh dấu vị trí cầu -->
         <a-entity id="bridgeMarker" gps-entity-place="latitude: 10.772799; longitude: 106.707865" scale="4 4 4"
-            gltf-model="#markerModel" position="0 -10 0" rotation="0 180 0" visible="false">
+            gltf-model="#markerModel" position="0 -10 0" rotation="0 90 0" visible="false">
         </a-entity>
 
         <!-- <a-entity id="helix_bridge" gps-entity-place="latitude: 10.912037; longitude: 106.584806" scale="1 1 1"
@@ -353,12 +353,12 @@
 
             // Chờ một chút trước khi chạy animation để chắc chắn cầu hiển thị trước
             setTimeout(() => {
-                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 150} 75 ${initialPosition.z}; to: ${initialPosition.x + 150} ${initialPosition.y} ${initialPosition.z}; dur: 900; easing: easeOutBack ;`);
+                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 200} 75 ${initialPosition.z}; to: ${initialPosition.x + 200} ${initialPosition.y} ${initialPosition.z}; dur: 900; easing: easeOutBack ;`);
                 // Đợi 3s (thời gian cầu xuất hiện) rồi mới hiển thị text
                 // Chờ 5s rồi mới hiện marker
                 setTimeout(() => {
                     marker.setAttribute("visible", "true");
-                    marker.setAttribute("animation", `property: position; from: ${makerPosition.x} ${makerPosition.y - 30} ${makerPosition.z}; to: ${makerPosition.x} ${makerPosition.y} ${makerPosition.z}; dur: 1000; easing: linear;`);
+                    marker.setAttribute("animation", `property: position; from: ${makerPosition.x} ${makerPosition.y - 30} ${makerPosition.z - 100}; to: ${makerPosition.x} ${makerPosition.y} ${makerPosition.z - 100}; dur: 1000; easing: linear;`);
                 }, 3000);
                 setTimeout(() => {
                     const textArea = document.getElementById("textArea");
