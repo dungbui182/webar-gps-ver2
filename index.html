@@ -99,11 +99,11 @@
 
 
         <a-entity id="helix_bridge" gps-entity-place="latitude: 10.772905; longitude: 106.708191" scale="1.5 1.5 1.5"
-            gltf-model="#bridgeModel" rotation="0 -13 0" position="50 0 50" visible="false" gesture-handler></a-entity>
+            gltf-model="#bridgeModel" rotation="0 -13 0" position="0 0 0" visible="false" gesture-handler></a-entity>
 
         <!-- Model đánh dấu vị trí cầu -->
         <a-entity id="bridgeMarker" gps-entity-place="latitude: 10.772799; longitude: 106.707865" scale="4 4 4"
-            gltf-model="#markerModel" position="0 -75 0" rotation="0 180 0" visible="false">
+            gltf-model="#markerModel" position="0 -10 0" rotation="0 180 0" visible="false">
         </a-entity>
 
         <!-- <a-entity id="helix_bridge" gps-entity-place="latitude: 10.912037; longitude: 106.584806" scale="1 1 1"
@@ -353,7 +353,7 @@
 
             // Chờ một chút trước khi chạy animation để chắc chắn cầu hiển thị trước
             setTimeout(() => {
-                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 70} 75 ${initialPosition.z + 50}; to: ${initialPosition.x + 70} ${initialPosition.y} ${initialPosition.z + 50}; dur: 900; easing: easeOutBack ;`);
+                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 70} 75 ${initialPosition.z - 50}; to: ${initialPosition.x + 70} ${initialPosition.y} ${initialPosition.z - 50}; dur: 900; easing: easeOutBack ;`);
                 // Đợi 3s (thời gian cầu xuất hiện) rồi mới hiển thị text
                 // Chờ 5s rồi mới hiện marker
                 setTimeout(() => {
