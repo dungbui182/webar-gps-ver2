@@ -353,7 +353,7 @@
 
             // Chờ một chút trước khi chạy animation để chắc chắn cầu hiển thị trước
             setTimeout(() => {
-                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 550} 75 ${initialPosition.z - 100}; to: ${initialPosition.x + 550} ${initialPosition.y} ${initialPosition.z - 100}; dur: 900; easing: easeOutBack ;`);
+                bridge.setAttribute("animation", `property: position; from: ${initialPosition.x + 550} 75 ${initialPosition.z}; to: ${initialPosition.x + 550} ${initialPosition.y} ${initialPosition.z}; dur: 900; easing: easeOutBack ;`);
                 // Đợi 3s (thời gian cầu xuất hiện) rồi mới hiển thị text
                 // Chờ 5s rồi mới hiện marker
                 setTimeout(() => {
@@ -447,7 +447,7 @@
             let { x, z } = gpsToMeters(bridgeLat, bridgeLon, lat, lon);
 
             // Cập nhật vị trí cầu
-            // updatePosition(x, 0, z);
+            updatePosition(x, 0, z);
             let distance = calculateDistance(lat, lon, bridgeLat, bridgeLon).toFixed(2); // Làm tròn 2 số lẻ
 
             // document.getElementById("coords").innerHTML = `📍 Lat: ${lat} <br> Lon: ${lon} <br> 🔢 Khoảng cách: ${distance}m`;
